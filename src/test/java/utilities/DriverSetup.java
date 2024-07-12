@@ -33,15 +33,15 @@ public class DriverSetup {
         }
     }
 
-    @BeforeSuite
+    @BeforeMethod
     public void openABrowser(){
         WebDriver driver = getBrowser(browserName);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         setDriver(driver);
     }
 
-    @AfterSuite
+    @AfterMethod
     public void closeBrowser(){
         getDriver().quit();
     }

@@ -17,7 +17,7 @@ public class BasePage {
     }
 
     public void clickOnElement(By locator){
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(15));
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
     }
 
@@ -25,6 +25,26 @@ public class BasePage {
         getDriver().get(url);
     }
 
+    public void writeOnElement(By locator, String text){
+        getElement(locator).clear();
+        getElement(locator).sendKeys(text);
+    }
+
+    public Boolean getDisplayStatus(By locator){
+        try {
+            return getDriver().findElement(locator).isDisplayed();
+        }catch (Exception e){
+            return false;
+        }
+    }
+
+    public String getAttributeText(By locator, String attributeName){
+        return getElement(locator).getAttribute(attributeName);
+    }
+
+    public String getElementText(By locator){
+        return getElement(locator).getText();
+    }
 
 
 }
