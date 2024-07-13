@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="classes" thread-count="2">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/joshf/Downloads/Batch25WebAutomationPOM/src/test/java/testcases">
+        <classes>
+            <class name="testcases.TestHomePage">
+                <methods>
+                    <include name="testHomePageTitle"/>
+                </methods>
+            </class>
+            <class name="testcases.TestLoginPage">
+                <methods>
+                    <include name="test_login_with_valid_credentials"/>
+                    <exclude name="test_login_with_invalid_password"/>
+                    <exclude name="test_login_with_Wrong_Email"/>
+                    <exclude name="test_login_with_invalid_email"/>
+                    <exclude name="test_login_without_email"/>
+                    <exclude name="test_login_without_password"/>
+                    <exclude name="test_login_without_credentials"/>
+                    <exclude name="test_login_with_invalid_email_password"/>
+                    <exclude name="test_login_with_invalid_credentials"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,24 @@
+Allure Commandline tool
+https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/
+Allure documentation
+https://allurereport.org/docs/testng/
+
+// generating Allure report
+allure generate ./allure-results --clean
+// display Allure report using local server
+allure open ./allure-report/
+
+Run project In CLI Mode
+mvn test
+
+Run project In CLI Mode with specific browser
+mv test -Dbrowser="chrome"
+
+Run project In CLI Mode with specific browser and suite file
+mv test -Dbrowser="chrome" -DxmlFileName="testng.xml"
+
+Batch 25 project url
+https://docs.google.com/document/d/1Iz4JCwP8I9Tv3UTaFYfH5wsHYXrQMpo_Y0KRkV0evVQ/edit?usp=sharing
+
+How to use old session to bypass OTP or captcha
+https://www.youtube.com/watch?v=IBrhp9hBPkI&t=2s
