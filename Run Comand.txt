@@ -1,0 +1,24 @@
+Allure Commandline tool
+https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/
+Allure documentation
+https://allurereport.org/docs/testng/
+
+// generating Allure report
+allure generate ./allure-results --clean
+// display Allure report using local server
+allure open ./allure-report/
+
+Run project In CLI Mode
+mvn test
+
+Run project In CLI Mode with specific browser
+mv test -Dbrowser="chrome"
+
+Run project In CLI Mode with specific browser and suite file
+mv test -Dbrowser="chrome" -Dsuitefilename="testng.xml"
+
+Web Automation Course content url
+https://docs.google.com/document/d/15V5v2Fx9b0jshYc4S3dWlgHFz51NyTO4p0ex1J-hT2E/edit?tab=t.0
+
+Web Automation Slide
+https://docs.google.com/presentation/d/1BfmUKu-ywnzZorkN881AV2GnHoZuQYGkmoS596hIbPY/edit?usp=sharing
